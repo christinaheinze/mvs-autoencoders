@@ -61,7 +61,7 @@ def main():
                         help='recon loss weight is increasd by this much every save_every steps')
     parser.add_argument('--rla_rate_rise_time', type = int, default = 10,
                         help = 'iterations before increasing recon loss term')
-    parser.add_argument('--decay_rate', type=float, default=0.95,
+    parser.add_argument('--decay_rate', type=float, default=1,
                        help='decay rate for learning rate')
     parser.add_argument('--img_data', type = bool, default = True,
                             help = 'true if image data')

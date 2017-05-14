@@ -13,9 +13,9 @@ import re
 import _pickle as pkl
 from tensorflow.examples.tutorials.mnist import input_data
 
-s_dir = 'mvs/ae'
-l_dir = 'mvs/ae_log'
-strin = "mod_conv,nz_2,lr_1E-03,wr_1E+00,wp_1E+00,dr_1E+00,num_ep100,d_mnist"
+s_dir = 'mvs2/ae'
+l_dir = 'mvs2/ae_log'
+strin = "vae_False,mod_conv,nz_2,lr_1E-03,wr_1E+00,wp_1E+00,dr_1E+00,num_ep150,d_mnist"
 dirs = get_dirs2(s_dir, l_dir, strin)
 save_dir = dirs[0]
 ckpt_dir = dirs[1]
