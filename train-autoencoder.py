@@ -18,9 +18,9 @@ def main():
                        help='data file name')
     parser.add_argument('--file_path', type=str, default='../data/',
                        help='path to files')
-    parser.add_argument('--save_dir', type=str, default='mvs/ae',
+    parser.add_argument('--save_dir', type=str, default='mvs_log/ae',
                        help='directory to store checkpointed models')
-    parser.add_argument('--log_dir', type = str, default = 'mvs/ae_log',
+    parser.add_argument('--log_dir', type = str, default = 'mvs_log/ae_log',
                       help = 'directory for logging')
     parser.add_argument('--img_size_w', type=int, default=28,
                        help='size of input images')

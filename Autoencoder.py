@@ -101,7 +101,6 @@ class Autoencoder():
             self.lr_update = tf.assign(self.lr, self.new_lr)
             opt_func = tf.train.AdamOptimizer(self.lr)
             # tvars = tf.trainable_variables()
-            #
             # self.grads = tf.gradients(self.cost, tvars)
             # self.grad_clipped = tf.clip_by_global_norm(self.grads,1)
             # self.train_op = opt_func.apply_gradients(zip(self.grad_clipped, tvars))
@@ -266,8 +265,6 @@ class Autoencoder():
 
     def generate(self, sess, saved_args, n, z_mu=None):
         """ Generate data by sampling from latent space.  """
-        # Note: This maps to mean of distribution, we could alternatively
-        # sample from Gaussian distribution
         if z_mu is None:
             z_mu = np.random.normal(size=(n, saved_args.n_z))
         return sess.run(self.generated_images,
